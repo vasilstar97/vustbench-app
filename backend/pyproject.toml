@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling>=1.26,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "vustbench-app"
+version = "0.1.0"
+description = "Web application and job runner for the VUSTBench testing ground"
+requires-python = ">=3.11,<3.15"
+dependencies = [
+  "vustbench-core==0.1.0",
+  "fastapi>=0.115,<1",
+  "uvicorn>=0.34,<1",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.3,<10", "httpx>=0.28,<1"]
+
+[project.scripts]
+vustbench = "vustbench_app.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/vustbench_app"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

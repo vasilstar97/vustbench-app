@@ -1,0 +1,2309 @@
+﻿{
+    "version":  1,
+    "source":  "Описание_бенчмарка_для_задачи_управления_развитием_территорий.docx, приложение 1",
+    "indicators":  [
+                       {
+                           "id":  "indicator:1",
+                           "number":  "1.1",
+                           "name":  "Площадь территории",
+                           "unit":  "кв.км.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "1",
+                                              "name":  "Показатели состояния территорий"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:2",
+                           "number":  "1.2",
+                           "name":  "Степень урбанизации территории",
+                           "unit":  "%",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "1",
+                                              "name":  "Показатели состояния территорий"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:3",
+                           "number":  "1.3",
+                           "name":  "Площадь свободных территорий, доступных к преобразованию",
+                           "unit":  "кв.км.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "1",
+                                              "name":  "Показатели состояния территорий"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:4",
+                           "number":  "1.4",
+                           "name":  "Площадь урбанизированных территорий, доступных к преобразованию",
+                           "unit":  "кв.км.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "1",
+                                              "name":  "Показатели состояния территорий"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:5",
+                           "number":  "1.5",
+                           "name":  "Площадь свободных территорий",
+                           "unit":  "кв.км.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "1",
+                                              "name":  "Показатели состояния территорий"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:6",
+                           "number":  "1.6",
+                           "name":  "Площадь урбанизированных территорий",
+                           "unit":  "кв.км.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "1",
+                                              "name":  "Показатели состояния территорий"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:7",
+                           "number":  "1.7",
+                           "name":  "Оценка качества среды для жизни",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "1",
+                                              "name":  "Показатели состояния территорий"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:8",
+                           "number":  "1.8",
+                           "name":  "Объем ввода в эксплуатацию жилой и нежилой недвижимости",
+                           "unit":  "кв.м.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "1",
+                                              "name":  "Показатели состояния территорий"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:9",
+                           "number":  "1.9",
+                           "name":  "Уровень благоустройства территории",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "1",
+                                              "name":  "Показатели состояния территорий"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:10",
+                           "number":  "1.10",
+                           "name":  "Качество окружающей среды",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "1",
+                                              "name":  "Показатели состояния территорий"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:11",
+                           "number":  "2.1",
+                           "name":  "Доля земель, занимаемых ООПТ",
+                           "unit":  "%",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "2",
+                                              "name":  "Природно-климатические факторы"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:12",
+                           "number":  "2.2",
+                           "name":  "Площадь озелененных городских территорий",
+                           "unit":  "кв.км.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "2",
+                                              "name":  "Природно-климатические факторы"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:13",
+                           "number":  "2.3",
+                           "name":  "Площадь зон накопленного вреда",
+                           "unit":  "кв.км.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "2",
+                                              "name":  "Природно-климатические факторы"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:14",
+                           "number":  "2.4",
+                           "name":  "Процент территорий, испытывающих негативное антропогенное воздействие",
+                           "unit":  "%",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "2",
+                                              "name":  "Природно-климатические факторы"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:15",
+                           "number":  "2.5",
+                           "name":  "Биологическое разнообразие видов",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "2",
+                                              "name":  "Природно-климатические факторы"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:16",
+                           "number":  "3.1",
+                           "name":  "Численность населения",
+                           "unit":  "чел.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "3",
+                                              "name":  "Демографические показатели"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:17",
+                           "number":  "3.2",
+                           "name":  "Плотность населения",
+                           "unit":  "чел./ кв.км.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "3",
+                                              "name":  "Демографические показатели"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:18",
+                           "number":  "3.3",
+                           "name":  "Коэффициент рождаемости",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "3",
+                                              "name":  "Демографические показатели"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:19",
+                           "number":  "3.4",
+                           "name":  "Коэффициент смертности",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "3",
+                                              "name":  "Демографические показатели"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:20",
+                           "number":  "3.5",
+                           "name":  "Коэффициент миграции",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "3",
+                                              "name":  "Демографические показатели"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:21",
+                           "number":  "3.6",
+                           "name":  "Ожидаемая продолжительность жизни",
+                           "unit":  "лет",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "3",
+                                              "name":  "Демографические показатели"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:22",
+                           "number":  "3.7",
+                           "name":  "Дифференциация продолжительности жизни",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "3",
+                                              "name":  "Демографические показатели"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:23",
+                           "number":  "3.8",
+                           "name":  "Коэффициент удержания молодежи",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "3",
+                                              "name":  "Демографические показатели"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:24",
+                           "number":  "4.1",
+                           "name":  "Численность городского населения",
+                           "unit":  "чел.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "4",
+                                              "name":  "Показатели системы расселения"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:25",
+                           "number":  "4.2",
+                           "name":  "Численность сельского населения",
+                           "unit":  "чел.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "4",
+                                              "name":  "Показатели системы расселения"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:26",
+                           "number":  "4.3",
+                           "name":  "Численность населения, проживающего в опорных населенных пунктах",
+                           "unit":  "чел.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "4",
+                                              "name":  "Показатели системы расселения"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:27",
+                           "number":  "4.4",
+                           "name":  "Численность населения, проживающего в центрах агломераций",
+                           "unit":  "чел.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "4",
+                                              "name":  "Показатели системы расселения"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:28",
+                           "number":  "4.5",
+                           "name":  "Численность населения, проживающего в населенных пунктах, входящих в агломерации более крупных населенных пунктов",
+                           "unit":  "чел.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "4",
+                                              "name":  "Показатели системы расселения"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:29",
+                           "number":  "4.6",
+                           "name":  "Численность населения, проживающего в субурбии",
+                           "unit":  "чел.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "4",
+                                              "name":  "Показатели системы расселения"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:30",
+                           "number":  "4.7",
+                           "name":  "Количество населенных пунктов в агломерациях",
+                           "unit":  "ед.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "4",
+                                              "name":  "Показатели системы расселения"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:31",
+                           "number":  "4.8",
+                           "name":  "Количество населенных пунктов вне агломераций",
+                           "unit":  "ед.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "4",
+                                              "name":  "Показатели системы расселения"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:32",
+                           "number":  "4.9",
+                           "name":  "Объем маятниковой миграции",
+                           "unit":  "чел./сутки",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "4",
+                                              "name":  "Показатели системы расселения"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:33",
+                           "number":  "5.1",
+                           "name":  "Объем инвестиций в основной капитал в расчете на одного человека",
+                           "unit":  "млн. руб.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "5",
+                                              "name":  "Показатели экономической ситуации"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:34",
+                           "number":  "5.2",
+                           "name":  "Валовый региональный продукт на душу населения",
+                           "unit":  "млн. руб.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "5",
+                                              "name":  "Показатели экономической ситуации"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:35",
+                           "number":  "5.3",
+                           "name":  "Доходы бюджета территории",
+                           "unit":  "млн. руб.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "5",
+                                              "name":  "Показатели экономической ситуации"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:36",
+                           "number":  "5.4",
+                           "name":  "Средний уровень заработной платы",
+                           "unit":  "тыс. руб.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "5",
+                                              "name":  "Показатели экономической ситуации"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:37",
+                           "number":  "5.5",
+                           "name":  "Уровень бедности",
+                           "unit":  "%",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "5",
+                                              "name":  "Показатели экономической ситуации"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:38",
+                           "number":  "5.6",
+                           "name":  "Темп роста среднедушевого денежного дохода населения",
+                           "unit":  "%",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "5",
+                                              "name":  "Показатели экономической ситуации"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:39",
+                           "number":  "5.7",
+                           "name":  "Износ основного фонда",
+                           "unit":  "тыс. руб.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "5",
+                                              "name":  "Показатели экономической ситуации"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:40",
+                           "number":  "5.8",
+                           "name":  "Количество организаций по данным государственной регистрации",
+                           "unit":  "ед.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "5",
+                                              "name":  "Показатели экономической ситуации"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:41",
+                           "number":  "5.9",
+                           "name":  "Количество малых и средних предприятий",
+                           "unit":  "ед.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "5",
+                                              "name":  "Показатели экономической ситуации"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:42",
+                           "number":  "5.10",
+                           "name":  "Количество индивидуальных предпринимателей",
+                           "unit":  "ед.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "5",
+                                              "name":  "Показатели экономической ситуации"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:43",
+                           "number":  "5.11",
+                           "name":  "Темп роста доходов в расчете на одного работника субъекта малого и среднего предпринимательства",
+                           "unit":  "%",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "5",
+                                              "name":  "Показатели экономической ситуации"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:44",
+                           "number":  "5.12",
+                           "name":  "Доступность сырьевой базы",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "5",
+                                              "name":  "Показатели экономической ситуации"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:45",
+                           "number":  "5.13",
+                           "name":  "Темп роста физического объема инвестиций в основной капитал",
+                           "unit":  "%",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "5",
+                                              "name":  "Показатели экономической ситуации"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:46",
+                           "number":  "5.14",
+                           "name":  "Доля креативных (творческих) индустрий в экономике",
+                           "unit":  "%",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "5",
+                                              "name":  "Показатели экономической ситуации"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:47",
+                           "number":  "5.15",
+                           "name":  "Доля градообразующего предприятия в общей занятости и доходах бюджета",
+                           "unit":  "%",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "5",
+                                              "name":  "Показатели экономической ситуации"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:48",
+                           "number":  "5.16",
+                           "name":  "Индекс потребительских цен относительно среднего по РФ",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "5",
+                                              "name":  "Показатели экономической ситуации"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:49",
+                           "number":  "6.1",
+                           "name":  "Связанность населенных пунктов",
+                           "unit":  "мин.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "6",
+                                              "name":  "Показатели транспортной системы"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:50",
+                           "number":  "6.2",
+                           "name":  "Средняя связанность территорий",
+                           "unit":  "мин.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "6",
+                                              "name":  "Показатели транспортной системы"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:51",
+                           "number":  "6.3",
+                           "name":  "Средняя удаленность до центра субъекта",
+                           "unit":  "мин.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "6",
+                                              "name":  "Показатели транспортной системы"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:52",
+                           "number":  "6.4",
+                           "name":  "Средняя удаленность до центра муниципального образования",
+                           "unit":  "мин.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "6",
+                                              "name":  "Показатели транспортной системы"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:53",
+                           "number":  "6.5",
+                           "name":  "Средняя удаленность до федеральных транспортных магистралей",
+                           "unit":  "мин.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "6",
+                                              "name":  "Показатели транспортной системы"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:54",
+                           "number":  "6.6",
+                           "name":  "Количество автозаправочных станций",
+                           "unit":  "ед.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "6",
+                                              "name":  "Показатели транспортной системы"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:55",
+                           "number":  "6.7",
+                           "name":  "Средняя доступность автозаправочных станций",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "6",
+                                              "name":  "Показатели транспортной системы"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:56",
+                           "number":  "6.8",
+                           "name":  "Средняя доступность остановок железнодорожного транспорта",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "6",
+                                              "name":  "Показатели транспортной системы"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:57",
+                           "number":  "6.9",
+                           "name":  "Средняя доступность остановок автомобильного транспорта",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "6",
+                                              "name":  "Показатели транспортной системы"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:58",
+                           "number":  "6.10",
+                           "name":  "Средняя доступность международных аэропортов",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "6",
+                                              "name":  "Показатели транспортной системы"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:59",
+                           "number":  "6.11",
+                           "name":  "Средняя доступность аэропортов местного значения",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "6",
+                                              "name":  "Показатели транспортной системы"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:60",
+                           "number":  "6.12",
+                           "name":  "Доля дорог, соответствующих нормам",
+                           "unit":  "%",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "6",
+                                              "name":  "Показатели транспортной системы"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:61",
+                           "number":  "7.1",
+                           "name":  "Количество негазифицированных населенных пунктов",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "7",
+                                              "name":  "Показатели инженерной инфраструктуры"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:62",
+                           "number":  "7.2",
+                           "name":  "Состояние системы водоснабжения",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "7",
+                                              "name":  "Показатели инженерной инфраструктуры"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:63",
+                           "number":  "7.3",
+                           "name":  "Состояние системы водоотведения и канализации",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "7",
+                                              "name":  "Показатели инженерной инфраструктуры"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:64",
+                           "number":  "7.4",
+                           "name":  "Состояние системы отопления",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "7",
+                                              "name":  "Показатели инженерной инфраструктуры"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:65",
+                           "number":  "7.5",
+                           "name":  "Состояние уличной ливневой канализации",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "7",
+                                              "name":  "Показатели инженерной инфраструктуры"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:66",
+                           "number":  "7.6",
+                           "name":  "Состояние системы электроснабжения",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "7",
+                                              "name":  "Показатели инженерной инфраструктуры"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:67",
+                           "number":  "7.6",
+                           "name":  "Состояние системы газоснабжения",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "7",
+                                              "name":  "Показатели инженерной инфраструктуры"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:68",
+                           "number":  "7.7",
+                           "name":  "Состояние системы наружного освещения",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "7",
+                                              "name":  "Показатели инженерной инфраструктуры"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:69",
+                           "number":  "8.1",
+                           "name":  "Уровень износа жилого фонда",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "8",
+                                              "name":  "Показатели жилищной инфраструктуры"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:70",
+                           "number":  "8.2",
+                           "name":  "Количество людей, проживающих в аварийных домах",
+                           "unit":  "чел.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "8",
+                                              "name":  "Показатели жилищной инфраструктуры"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:71",
+                           "number":  "8.3",
+                           "name":  "Количество людей, проживающих в домах, требующих капитального ремонта",
+                           "unit":  "чел.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "8",
+                                              "name":  "Показатели жилищной инфраструктуры"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:72",
+                           "number":  "8.4",
+                           "name":  "Доля жилого фонда, требующего капитального ремонта",
+                           "unit":  "%",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "8",
+                                              "name":  "Показатели жилищной инфраструктуры"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:73",
+                           "number":  "8.5",
+                           "name":  "Доля аварийного жилого фонда",
+                           "unit":  "%",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "8",
+                                              "name":  "Показатели жилищной инфраструктуры"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:74",
+                           "number":  "8.6",
+                           "name":  "Обеспеченность населения жильем",
+                           "unit":  "%",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "8",
+                                              "name":  "Показатели жилищной инфраструктуры"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:75",
+                           "number":  "8.7",
+                           "name":  "Доступность жилья на первичном рынке",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "8",
+                                              "name":  "Показатели жилищной инфраструктуры"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "provision:kindergarten",
+                           "number":  "9.1.1",
+                           "name":  "Обеспеченность дошкольными образовательными учреждениями",
+                           "unit":  "б.р.",
+                           "calculator":  "service_provision",
+                           "result_field":  "provision_ratio",
+                           "precision":  3,
+                           "service":  "kindergarten",
+                           "scale":  1,
+                           "map":  {
+                                       "layer":  "buildings",
+                                       "overview_layer":  "blocks",
+                                       "overlays":  [
+                                                        "services"
+                                                    ],
+                                       "field":  "provision_value",
+                                       "range":  [
+                                                     0,
+                                                     1
+                                                 ],
+                                       "colors":  [
+                                                      "#ff4d4f",
+                                                      "#ffc53d",
+                                                      "#52c41a"
+                                                  ]
+                                   },
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.1",
+                                              "name":  "Показатели сферы образования"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "provision:school",
+                           "number":  "9.1.2",
+                           "name":  "Обеспеченность общеобразовательными учреждениями",
+                           "unit":  "б.р.",
+                           "calculator":  "service_provision",
+                           "result_field":  "provision_ratio",
+                           "precision":  3,
+                           "service":  "school",
+                           "scale":  1,
+                           "map":  {
+                                       "layer":  "buildings",
+                                       "overview_layer":  "blocks",
+                                       "overlays":  [
+                                                        "services"
+                                                    ],
+                                       "field":  "provision_value",
+                                       "range":  [
+                                                     0,
+                                                     1
+                                                 ],
+                                       "colors":  [
+                                                      "#ff4d4f",
+                                                      "#ffc53d",
+                                                      "#52c41a"
+                                                  ]
+                                   },
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.1",
+                                              "name":  "Показатели сферы образования"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "provision:college",
+                           "number":  "9.1.3",
+                           "name":  "Обеспеченность образовательными учреждениями СПО",
+                           "unit":  "б.р.",
+                           "calculator":  "service_provision",
+                           "result_field":  "provision_ratio",
+                           "precision":  3,
+                           "service":  "college",
+                           "scale":  1,
+                           "map":  {
+                                       "layer":  "buildings",
+                                       "overview_layer":  "blocks",
+                                       "overlays":  [
+                                                        "services"
+                                                    ],
+                                       "field":  "provision_value",
+                                       "range":  [
+                                                     0,
+                                                     1
+                                                 ],
+                                       "colors":  [
+                                                      "#ff4d4f",
+                                                      "#ffc53d",
+                                                      "#52c41a"
+                                                  ]
+                                   },
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.1",
+                                              "name":  "Показатели сферы образования"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "provision:university",
+                           "number":  "9.1.4",
+                           "name":  "Обеспеченность высшими учебными заведениями",
+                           "unit":  "б.р.",
+                           "calculator":  "service_provision",
+                           "result_field":  "provision_ratio",
+                           "precision":  3,
+                           "service":  "university",
+                           "scale":  1,
+                           "map":  {
+                                       "layer":  "buildings",
+                                       "overview_layer":  "blocks",
+                                       "overlays":  [
+                                                        "services"
+                                                    ],
+                                       "field":  "provision_value",
+                                       "range":  [
+                                                     0,
+                                                     1
+                                                 ],
+                                       "colors":  [
+                                                      "#ff4d4f",
+                                                      "#ffc53d",
+                                                      "#52c41a"
+                                                  ]
+                                   },
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.1",
+                                              "name":  "Показатели сферы образования"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:80",
+                           "number":  "9.1.5",
+                           "name":  "Обеспеченность организациями дополнительного образования детей",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.1",
+                                              "name":  "Показатели сферы образования"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:81",
+                           "number":  "9.1.6",
+                           "name":  "Уровень образования населения",
+                           "unit":  "%",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.1",
+                                              "name":  "Показатели сферы образования"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "provision:hospital",
+                           "number":  "9.2.1",
+                           "name":  "Обеспеченность больничными учреждениями стационарного типа",
+                           "unit":  "б.р.",
+                           "calculator":  "service_provision",
+                           "result_field":  "provision_ratio",
+                           "precision":  3,
+                           "service":  "hospital",
+                           "scale":  1,
+                           "map":  {
+                                       "layer":  "buildings",
+                                       "overview_layer":  "blocks",
+                                       "overlays":  [
+                                                        "services"
+                                                    ],
+                                       "field":  "provision_value",
+                                       "range":  [
+                                                     0,
+                                                     1
+                                                 ],
+                                       "colors":  [
+                                                      "#ff4d4f",
+                                                      "#ffc53d",
+                                                      "#52c41a"
+                                                  ]
+                                   },
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.2",
+                                              "name":  "Показатели сферы здравоохранения"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "provision:polyclinic",
+                           "number":  "9.2.2",
+                           "name":  "Обеспеченность амбулаторно-поликлиническими учреждениями",
+                           "unit":  "б.р.",
+                           "calculator":  "service_provision",
+                           "result_field":  "provision_ratio",
+                           "precision":  3,
+                           "service":  "polyclinic",
+                           "scale":  1,
+                           "map":  {
+                                       "layer":  "buildings",
+                                       "overview_layer":  "blocks",
+                                       "overlays":  [
+                                                        "services"
+                                                    ],
+                                       "field":  "provision_value",
+                                       "range":  [
+                                                     0,
+                                                     1
+                                                 ],
+                                       "colors":  [
+                                                      "#ff4d4f",
+                                                      "#ffc53d",
+                                                      "#52c41a"
+                                                  ]
+                                   },
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.2",
+                                              "name":  "Показатели сферы здравоохранения"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:84",
+                           "number":  "9.2.3",
+                           "name":  "Обеспеченность объектами скорой медицинской помощи",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.2",
+                                              "name":  "Показатели сферы здравоохранения"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "provision:sanatorium",
+                           "number":  "9.2.4",
+                           "name":  "Обеспеченность объектами санаторного назначения",
+                           "unit":  "б.р.",
+                           "calculator":  "service_provision",
+                           "result_field":  "provision_ratio",
+                           "precision":  3,
+                           "service":  "sanatorium",
+                           "scale":  1,
+                           "map":  {
+                                       "layer":  "buildings",
+                                       "overview_layer":  "blocks",
+                                       "overlays":  [
+                                                        "services"
+                                                    ],
+                                       "field":  "provision_value",
+                                       "range":  [
+                                                     0,
+                                                     1
+                                                 ],
+                                       "colors":  [
+                                                      "#ff4d4f",
+                                                      "#ffc53d",
+                                                      "#52c41a"
+                                                  ]
+                                   },
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.2",
+                                              "name":  "Показатели сферы здравоохранения"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:86",
+                           "number":  "9.2.5",
+                           "name":  "Обеспеченность медицинскими учреждениями особого типа",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.2",
+                                              "name":  "Показатели сферы здравоохранения"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:87",
+                           "number":  "9.2.6",
+                           "name":  "Обеспеченность лечебно-профилактическими медицинскими учреждениями",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.2",
+                                              "name":  "Показатели сферы здравоохранения"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "provision:pharmacy",
+                           "number":  "9.2.7",
+                           "name":  "Обеспеченность фармацевтическими объектами",
+                           "unit":  "б.р.",
+                           "calculator":  "service_provision",
+                           "result_field":  "provision_ratio",
+                           "precision":  3,
+                           "service":  "pharmacy",
+                           "scale":  1,
+                           "map":  {
+                                       "layer":  "buildings",
+                                       "overview_layer":  "blocks",
+                                       "overlays":  [
+                                                        "services"
+                                                    ],
+                                       "field":  "provision_value",
+                                       "range":  [
+                                                     0,
+                                                     1
+                                                 ],
+                                       "colors":  [
+                                                      "#ff4d4f",
+                                                      "#ffc53d",
+                                                      "#52c41a"
+                                                  ]
+                                   },
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.2",
+                                              "name":  "Показатели сферы здравоохранения"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "provision:post",
+                           "number":  "9.3.1",
+                           "name":  "Обеспеченность почтовыми отделениями",
+                           "unit":  "б.р.",
+                           "calculator":  "service_provision",
+                           "result_field":  "provision_ratio",
+                           "precision":  3,
+                           "service":  "post",
+                           "scale":  1,
+                           "map":  {
+                                       "layer":  "buildings",
+                                       "overview_layer":  "blocks",
+                                       "overlays":  [
+                                                        "services"
+                                                    ],
+                                       "field":  "provision_value",
+                                       "range":  [
+                                                     0,
+                                                     1
+                                                 ],
+                                       "colors":  [
+                                                      "#ff4d4f",
+                                                      "#ffc53d",
+                                                      "#52c41a"
+                                                  ]
+                                   },
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.3",
+                                              "name":  "Показатели сферы услуг"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "provision:bank",
+                           "number":  "9.3.2",
+                           "name":  "Обеспеченность отделениями банков",
+                           "unit":  "б.р.",
+                           "calculator":  "service_provision",
+                           "result_field":  "provision_ratio",
+                           "precision":  3,
+                           "service":  "bank",
+                           "scale":  1,
+                           "map":  {
+                                       "layer":  "buildings",
+                                       "overview_layer":  "blocks",
+                                       "overlays":  [
+                                                        "services"
+                                                    ],
+                                       "field":  "provision_value",
+                                       "range":  [
+                                                     0,
+                                                     1
+                                                 ],
+                                       "colors":  [
+                                                      "#ff4d4f",
+                                                      "#ffc53d",
+                                                      "#52c41a"
+                                                  ]
+                                   },
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.3",
+                                              "name":  "Показатели сферы услуг"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "provision:multifunctional_center",
+                           "number":  "9.3.3",
+                           "name":  "Обеспеченность центрами оказания государственных и муниципальных услуг",
+                           "unit":  "б.р.",
+                           "calculator":  "service_provision",
+                           "result_field":  "provision_ratio",
+                           "precision":  3,
+                           "service":  "multifunctional_center",
+                           "scale":  1,
+                           "map":  {
+                                       "layer":  "buildings",
+                                       "overview_layer":  "blocks",
+                                       "overlays":  [
+                                                        "services"
+                                                    ],
+                                       "field":  "provision_value",
+                                       "range":  [
+                                                     0,
+                                                     1
+                                                 ],
+                                       "colors":  [
+                                                      "#ff4d4f",
+                                                      "#ffc53d",
+                                                      "#52c41a"
+                                                  ]
+                                   },
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.3",
+                                              "name":  "Показатели сферы услуг"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "provision:library",
+                           "number":  "9.4.1",
+                           "name":  "Обеспеченность библиотеками",
+                           "unit":  "б.р.",
+                           "calculator":  "service_provision",
+                           "result_field":  "provision_ratio",
+                           "precision":  3,
+                           "service":  "library",
+                           "scale":  1,
+                           "map":  {
+                                       "layer":  "buildings",
+                                       "overview_layer":  "blocks",
+                                       "overlays":  [
+                                                        "services"
+                                                    ],
+                                       "field":  "provision_value",
+                                       "range":  [
+                                                     0,
+                                                     1
+                                                 ],
+                                       "colors":  [
+                                                      "#ff4d4f",
+                                                      "#ffc53d",
+                                                      "#52c41a"
+                                                  ]
+                                   },
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.4",
+                                              "name":  "Показатели культуры и отдыха"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "provision:museum",
+                           "number":  "9.4.2",
+                           "name":  "Обеспеченность музеями",
+                           "unit":  "б.р.",
+                           "calculator":  "service_provision",
+                           "result_field":  "provision_ratio",
+                           "precision":  3,
+                           "service":  "museum",
+                           "scale":  1,
+                           "map":  {
+                                       "layer":  "buildings",
+                                       "overview_layer":  "blocks",
+                                       "overlays":  [
+                                                        "services"
+                                                    ],
+                                       "field":  "provision_value",
+                                       "range":  [
+                                                     0,
+                                                     1
+                                                 ],
+                                       "colors":  [
+                                                      "#ff4d4f",
+                                                      "#ffc53d",
+                                                      "#52c41a"
+                                                  ]
+                                   },
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.4",
+                                              "name":  "Показатели культуры и отдыха"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "provision:theatre",
+                           "number":  "9.4.3",
+                           "name":  "Обеспеченность театрами",
+                           "unit":  "б.р.",
+                           "calculator":  "service_provision",
+                           "result_field":  "provision_ratio",
+                           "precision":  3,
+                           "service":  "theatre",
+                           "scale":  1,
+                           "map":  {
+                                       "layer":  "buildings",
+                                       "overview_layer":  "blocks",
+                                       "overlays":  [
+                                                        "services"
+                                                    ],
+                                       "field":  "provision_value",
+                                       "range":  [
+                                                     0,
+                                                     1
+                                                 ],
+                                       "colors":  [
+                                                      "#ff4d4f",
+                                                      "#ffc53d",
+                                                      "#52c41a"
+                                                  ]
+                                   },
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.4",
+                                              "name":  "Показатели культуры и отдыха"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "provision:cinema",
+                           "number":  "9.4.4",
+                           "name":  "Обеспеченность кинотеатрами",
+                           "unit":  "б.р.",
+                           "calculator":  "service_provision",
+                           "result_field":  "provision_ratio",
+                           "precision":  3,
+                           "service":  "cinema",
+                           "scale":  1,
+                           "map":  {
+                                       "layer":  "buildings",
+                                       "overview_layer":  "blocks",
+                                       "overlays":  [
+                                                        "services"
+                                                    ],
+                                       "field":  "provision_value",
+                                       "range":  [
+                                                     0,
+                                                     1
+                                                 ],
+                                       "colors":  [
+                                                      "#ff4d4f",
+                                                      "#ffc53d",
+                                                      "#52c41a"
+                                                  ]
+                                   },
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.4",
+                                              "name":  "Показатели культуры и отдыха"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "provision:mall",
+                           "number":  "9.4.5",
+                           "name":  "Обеспеченность торгово-развлекательными центрами",
+                           "unit":  "б.р.",
+                           "calculator":  "service_provision",
+                           "result_field":  "provision_ratio",
+                           "precision":  3,
+                           "service":  "mall",
+                           "scale":  1,
+                           "map":  {
+                                       "layer":  "buildings",
+                                       "overview_layer":  "blocks",
+                                       "overlays":  [
+                                                        "services"
+                                                    ],
+                                       "field":  "provision_value",
+                                       "range":  [
+                                                     0,
+                                                     1
+                                                 ],
+                                       "colors":  [
+                                                      "#ff4d4f",
+                                                      "#ffc53d",
+                                                      "#52c41a"
+                                                  ]
+                                   },
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.4",
+                                              "name":  "Показатели культуры и отдыха"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "provision:park",
+                           "number":  "9.4.6",
+                           "name":  "Обеспеченность парками и рекреационными зонами",
+                           "unit":  "б.р.",
+                           "calculator":  "service_provision",
+                           "result_field":  "provision_ratio",
+                           "precision":  3,
+                           "service":  "park",
+                           "scale":  1,
+                           "map":  {
+                                       "layer":  "buildings",
+                                       "overview_layer":  "blocks",
+                                       "overlays":  [
+                                                        "services"
+                                                    ],
+                                       "field":  "provision_value",
+                                       "range":  [
+                                                     0,
+                                                     1
+                                                 ],
+                                       "colors":  [
+                                                      "#ff4d4f",
+                                                      "#ffc53d",
+                                                      "#52c41a"
+                                                  ]
+                                   },
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.4",
+                                              "name":  "Показатели культуры и отдыха"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "provision:beach",
+                           "number":  "9.4.7",
+                           "name":  "Обеспеченность пляжами",
+                           "unit":  "б.р.",
+                           "calculator":  "service_provision",
+                           "result_field":  "provision_ratio",
+                           "precision":  3,
+                           "service":  "beach",
+                           "scale":  1,
+                           "map":  {
+                                       "layer":  "buildings",
+                                       "overview_layer":  "blocks",
+                                       "overlays":  [
+                                                        "services"
+                                                    ],
+                                       "field":  "provision_value",
+                                       "range":  [
+                                                     0,
+                                                     1
+                                                 ],
+                                       "colors":  [
+                                                      "#ff4d4f",
+                                                      "#ffc53d",
+                                                      "#52c41a"
+                                                  ]
+                                   },
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.4",
+                                              "name":  "Показатели культуры и отдыха"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:99",
+                           "number":  "9.4.8",
+                           "name":  "Обеспеченность экологическими тропами",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.4",
+                                              "name":  "Показатели культуры и отдыха"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:100",
+                           "number":  "9.5.1",
+                           "name":  "Обеспеченность спортивными залами",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.5",
+                                              "name":  "Показатели спортивной инфраструктуры"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "provision:swimming_pool",
+                           "number":  "9.5.2",
+                           "name":  "Обеспеченность плавательными бассейнами",
+                           "unit":  "б.р.",
+                           "calculator":  "service_provision",
+                           "result_field":  "provision_ratio",
+                           "precision":  3,
+                           "service":  "swimming_pool",
+                           "scale":  1,
+                           "map":  {
+                                       "layer":  "buildings",
+                                       "overview_layer":  "blocks",
+                                       "overlays":  [
+                                                        "services"
+                                                    ],
+                                       "field":  "provision_value",
+                                       "range":  [
+                                                     0,
+                                                     1
+                                                 ],
+                                       "colors":  [
+                                                      "#ff4d4f",
+                                                      "#ffc53d",
+                                                      "#52c41a"
+                                                  ]
+                                   },
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.5",
+                                              "name":  "Показатели спортивной инфраструктуры"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "provision:pitch",
+                           "number":  "9.5.3",
+                           "name":  "Обеспеченность плоскостными спортивными сооружениями",
+                           "unit":  "б.р.",
+                           "calculator":  "service_provision",
+                           "result_field":  "provision_ratio",
+                           "precision":  3,
+                           "service":  "pitch",
+                           "scale":  1,
+                           "map":  {
+                                       "layer":  "buildings",
+                                       "overview_layer":  "blocks",
+                                       "overlays":  [
+                                                        "services"
+                                                    ],
+                                       "field":  "provision_value",
+                                       "range":  [
+                                                     0,
+                                                     1
+                                                 ],
+                                       "colors":  [
+                                                      "#ff4d4f",
+                                                      "#ffc53d",
+                                                      "#52c41a"
+                                                  ]
+                                   },
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.5",
+                                              "name":  "Показатели спортивной инфраструктуры"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "provision:stadium",
+                           "number":  "9.5.4",
+                           "name":  "Обеспеченность стадионами",
+                           "unit":  "б.р.",
+                           "calculator":  "service_provision",
+                           "result_field":  "provision_ratio",
+                           "precision":  3,
+                           "service":  "stadium",
+                           "scale":  1,
+                           "map":  {
+                                       "layer":  "buildings",
+                                       "overview_layer":  "blocks",
+                                       "overlays":  [
+                                                        "services"
+                                                    ],
+                                       "field":  "provision_value",
+                                       "range":  [
+                                                     0,
+                                                     1
+                                                 ],
+                                       "colors":  [
+                                                      "#ff4d4f",
+                                                      "#ffc53d",
+                                                      "#52c41a"
+                                                  ]
+                                   },
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.5",
+                                              "name":  "Показатели спортивной инфраструктуры"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:104",
+                           "number":  "9.5.5",
+                           "name":  "Уровень удовлетворенности населения условиями занятия физической культурой и спортом",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.5",
+                                              "name":  "Показатели спортивной инфраструктуры"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:105",
+                           "number":  "9.6.1",
+                           "name":  "Обеспеченность детскими домами-интернатами",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.6",
+                                              "name":  "Показатели социальной помощи"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:106",
+                           "number":  "9.6.2",
+                           "name":  "Обеспеченность домами престарелых",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.6",
+                                              "name":  "Показатели социальной помощи"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:107",
+                           "number":  "9.6.3",
+                           "name":  "Обеспеченность центрами социального обслуживания",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.6",
+                                              "name":  "Показатели социальной помощи"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:108",
+                           "number":  "9.6.4",
+                           "name":  "Доля людей, вовлеченных в добровольческую деятельность",
+                           "unit":  "%",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.6",
+                                              "name":  "Показатели социальной помощи"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "provision:hotel",
+                           "number":  "9.7.1",
+                           "name":  "Обеспеченность гостиницами",
+                           "unit":  "б.р.",
+                           "calculator":  "service_provision",
+                           "result_field":  "provision_ratio",
+                           "precision":  3,
+                           "service":  "hotel",
+                           "scale":  1,
+                           "map":  {
+                                       "layer":  "buildings",
+                                       "overview_layer":  "blocks",
+                                       "overlays":  [
+                                                        "services"
+                                                    ],
+                                       "field":  "provision_value",
+                                       "range":  [
+                                                     0,
+                                                     1
+                                                 ],
+                                       "colors":  [
+                                                      "#ff4d4f",
+                                                      "#ffc53d",
+                                                      "#52c41a"
+                                                  ]
+                                   },
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.7",
+                                              "name":  "Показатели туристической инфраструктуры"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:110",
+                           "number":  "9.7.2",
+                           "name":  "Обеспеченность туристическими базами",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.7",
+                                              "name":  "Показатели туристической инфраструктуры"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:111",
+                           "number":  "9.7.3",
+                           "name":  "Обеспеченность объектами общественного питания",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.7",
+                                              "name":  "Показатели туристической инфраструктуры"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:112",
+                           "number":  "9.7.4",
+                           "name":  "Доля туристической отрасти в ВВП",
+                           "unit":  "%",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.7",
+                                              "name":  "Показатели туристической инфраструктуры"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "indicator:113",
+                           "number":  "9.8.1",
+                           "name":  "Обеспеченность объектами пожарной безопасности",
+                           "unit":  "б.р.",
+                           "calculator":  "unavailable",
+                           "result_field":  "value",
+                           "precision":  3,
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.8",
+                                              "name":  "Показатели сферы безопасности"
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "provision:police",
+                           "number":  "9.8.2",
+                           "name":  "Обеспеченность полицейскими участками",
+                           "unit":  "б.р.",
+                           "calculator":  "service_provision",
+                           "result_field":  "provision_ratio",
+                           "precision":  3,
+                           "service":  "police",
+                           "scale":  1,
+                           "map":  {
+                                       "layer":  "buildings",
+                                       "overview_layer":  "blocks",
+                                       "overlays":  [
+                                                        "services"
+                                                    ],
+                                       "field":  "provision_value",
+                                       "range":  [
+                                                     0,
+                                                     1
+                                                 ],
+                                       "colors":  [
+                                                      "#ff4d4f",
+                                                      "#ffc53d",
+                                                      "#52c41a"
+                                                  ]
+                                   },
+                           "groups":  [
+                                          {
+                                              "number":  "9",
+                                              "name":  "Показатели состояния социальной инфраструктуры"
+                                          },
+                                          {
+                                              "number":  "9.8",
+                                              "name":  "Показатели сферы безопасности"
+                                          }
+                                      ]
+                       }
+                   ]
+}
