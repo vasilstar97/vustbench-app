@@ -5,6 +5,7 @@ from contextlib import redirect_stderr, redirect_stdout
 import gc
 
 from .datasets import DatasetStore
+from .criteria import CriteriaStore
 from .indicators import IndicatorStore
 from .runs import RunStore
 from .settings import Settings
@@ -14,12 +15,15 @@ def prepare(settings: Settings) -> int:
     from .__main__ import compute
 
     runs = RunStore(settings.artifacts_dir)
-    indicators = IndicatorStore(settings, DatasetStore(settings, runs), runs)
+    datasets = DatasetStore(settings, runs)
+    indicators = IndicatorStore(settings, datasets, runs)
+    criteria = CriteriaStore(settings, datasets, indicators, runs)
     jobs = {}
-    for definition in indicators.definitions():
+    available = {item["name"] for item in datasets.catalog() if item.get("available") is not False}
+    for definition in [*indicators.definitions(), *criteria.service_definitions()]:
         if definition["calculator"] == "service_provision":
             source = settings.data_dir / "services" / f"{definition['service']}.geojson"
-            if source.is_file():
+            if source.is_file() and definition["service"] in available:
                 jobs.setdefault(definition["service"], definition)
     failures = 0
     for index, definition in enumerate(jobs.values(), 1):
@@ -43,4 +47,7 @@ def prepare(settings: Settings) -> int:
         else:
             print(f"{prefix}: {saved['summary']['provision_ratio']:.4%}", flush=True)
         gc.collect()
+    if criteria.service_definitions():
+        payload = criteria.rows()
+        print(f"Social support: {len(payload['items'])} dependency nodes prepared", flush=True)
     return 1 if failures else 0

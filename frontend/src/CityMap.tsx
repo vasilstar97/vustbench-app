@@ -7,6 +7,7 @@ import type { GeoJSONSource, Map as LibreMap } from 'maplibre-gl';
 import { api, errorMessage, isAbort } from './api';
 import type { City, Indicator, LayerData, LayerName } from './api';
 import { number } from './format';
+import { metricTitle } from './metric';
 
 maplibregl.setWorkerUrl(mapWorkerUrl);
 const empty: LayerData = { type: 'FeatureCollection', features: [] };
@@ -63,7 +64,9 @@ export default function CityMap({ city, indicator }: Props) {
           },
           layers: [
             {id: 'background', type: 'background', paint: {'background-color': '#f0f2f5'}},
-            {id: 'osm', type: 'raster', source: 'osm', paint: {'raster-opacity': 0.7}},
+            {id: 'osm', type: 'raster', source: 'osm', paint: {
+              'raster-opacity': 0.7, 'raster-saturation': -1, 'raster-contrast': -0.1,
+            }},
             {id: 'blocks-fill', type: 'fill', source: 'blocks', maxzoom: detailZoom,
               paint: {'fill-color': '#91caff', 'fill-opacity': 0.65, 'fill-outline-color': '#ffffff'}},
             {id: 'buildings-fill', type: 'fill', source: 'buildings', minzoom: detailZoom,
@@ -145,7 +148,9 @@ export default function CityMap({ city, indicator }: Props) {
       try {
         const names: LayerName[] = [...new Set([layer, ...(view?.overlays ?? [])])];
         const responses = await Promise.all(names.map(name => view && indicator
-          ? api.indicatorLayer(indicator.id, name, params, controller!.signal)
+          ? (indicator.source === 'criteria'
+            ? api.criterionLayer(indicator.id, params, controller!.signal)
+            : api.indicatorLayer(indicator.id, name, params, controller!.signal))
           : api.layer(name, params, controller!.signal)));
         if (controller.signal.aborted || current !== requestId) return;
         for (const name of ['blocks', 'buildings', 'services'] as LayerName[]) {
@@ -171,10 +176,10 @@ export default function CityMap({ city, indicator }: Props) {
     <div className="map-top-left">
       {indicator && view && <Card size="small">
         <Space orientation="vertical" size="small">
-          <Typography.Text strong>{indicator.name}</Typography.Text>
+          <Typography.Text strong>{metricTitle(indicator)}</Typography.Text>
           <Space>{view.colors.map((color, index) => <Tag color={color} key={color}>
             {metric(view.range[0] + (view.range[1] - view.range[0]) * index / (view.colors.length - 1), indicator)}
-          </Tag>)}{loading && <Spin size="small" />}</Space>
+          </Tag>)}{indicator.source === 'criteria' && <Tag>Нет данных</Tag>}{loading && <Spin size="small" />}</Space>
         </Space>
       </Card>}
       {truncated && <Alert type="info" title="Приблизьте карту, чтобы увидеть все объекты." />}
@@ -188,7 +193,7 @@ export default function CityMap({ city, indicator }: Props) {
       extra={<Button type="text" size="small" icon={<CloseOutlined />} aria-label="Закрыть карточку" onClick={() => setSelection(undefined)} />}>
       <Descriptions size="small" column={1} items={[
         ...(indicator && view && (selection.kind === view.layer || selection.kind === view.overview_layer)
-          ? [{key: 'value', label: indicator.name, children: metric(properties[view.field], indicator)}] : []),
+          ? [{key: 'value', label: metricTitle(indicator), children: metric(properties[view.field], indicator)}] : []),
         ...(typeof properties.population === 'number' ? [{key: 'population', label: 'Население', children: number(properties.population)}] : []),
         ...(selection.kind === 'services' ? [
           {key: 'capacity', label: 'Вместимость', children: number(properties.capacity)},

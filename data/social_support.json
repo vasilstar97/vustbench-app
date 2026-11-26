@@ -1,0 +1,1977 @@
+{
+  "version": 1,
+  "model_version": "ksd-mvp-2",
+  "roots": [
+    "ktw",
+    "ked",
+    "ksd"
+  ],
+  "source": "Описание бенчмарка, раздел 5, формулы (30), (32), (46), таблица социальных групп.",
+  "missing_policy": "available_weight_mean; preserve_unknown_leaves; require_four_dimensions_for_k_sd",
+  "city_aggregation": "sum_service_demands_then_evaluate_graph",
+  "interpretation": "support_higher_is_better",
+  "todos": [
+    "Все веса предварительные, не получены из опросов или экспертной калибровки.",
+    "Равные веса сервисов внутри ситуации — нормированное приближение суммы (30), не логика обязательности всех сервисов.",
+    "Представитель социальной группы условный: входная обеспеченность рассчитана по общему населению.",
+    "Нулевой спрос в квартале — неизвестная поддержка, не нулевая и не полная.",
+    "Не подменять ясли обычным детсадом, детскую медицину взрослой, бизнес-образование всеми вузами.",
+    "Для широких типов больница/поликлиника доступна только общая оценка, без выделения детских учреждений.",
+    "Рабочие места и условия ведения бизнеса пока неизвестны.",
+    "Группы пересекаются; среднее с равными весами — индекс профилей, не доля обеспеченного населения.",
+    "Городская обеспеченность: суммы удовлетворённого спроса и общего спроса по зданиям; затем расчёт критериев. Усреднение квартальных коэффициентов не применяется."
+  ],
+  "nodes": [
+    {
+      "id": "ksd:families_infants:work:s1",
+      "name": "Уход за ребёнком",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:nursery",
+          "weight": 1.0
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:families_infants:work:s2",
+      "name": "Повседневные покупки",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:convenience",
+          "weight": 0.3333333333333333
+        },
+        {
+          "id": "service:supermarket",
+          "weight": 0.3333333333333333
+        },
+        {
+          "id": "service:pharmacy",
+          "weight": 0.3333333333333333
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:families_infants:work",
+      "name": "Основная деятельность",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "ksd:families_infants:work:s1",
+          "weight": 0.65
+        },
+        {
+          "id": "ksd:families_infants:work:s2",
+          "weight": 0.35
+        }
+      ],
+      "todo": "TODO: экспертно откалибровать веса жизненных ситуаций; текущие значения — предварительные."
+    },
+    {
+      "id": "ksd:families_infants:leisure:s1",
+      "name": "Прогулки и спокойный отдых",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:park",
+          "weight": 0.25
+        },
+        {
+          "id": "service:forest",
+          "weight": 0.25
+        },
+        {
+          "id": "service:embankment",
+          "weight": 0.25
+        },
+        {
+          "id": "service:botanical_garden",
+          "weight": 0.25
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:families_infants:leisure:s2",
+      "name": "Семейный досуг",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:zoo",
+          "weight": 0.25
+        },
+        {
+          "id": "service:circus",
+          "weight": 0.25
+        },
+        {
+          "id": "service:family_cafe",
+          "weight": 0.25
+        },
+        {
+          "id": "service:stable",
+          "weight": 0.25
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:families_infants:leisure",
+      "name": "Досуг",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "ksd:families_infants:leisure:s1",
+          "weight": 0.7
+        },
+        {
+          "id": "ksd:families_infants:leisure:s2",
+          "weight": 0.3
+        }
+      ],
+      "todo": "TODO: экспертно откалибровать веса жизненных ситуаций; текущие значения — предварительные."
+    },
+    {
+      "id": "ksd:families_infants:development:s1",
+      "name": "Ранняя социализация и развитие",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:library",
+          "weight": 0.5
+        },
+        {
+          "id": "service:cultural_center",
+          "weight": 0.5
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:families_infants:development",
+      "name": "Развитие",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "ksd:families_infants:development:s1",
+          "weight": 1
+        }
+      ],
+      "todo": "TODO: экспертно откалибровать веса жизненных ситуаций; текущие значения — предварительные."
+    },
+    {
+      "id": "ksd:families_infants:risk:s1",
+      "name": "Медицинская помощь",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:hospital",
+          "weight": 0.3333333333333333
+        },
+        {
+          "id": "service:polyclinic",
+          "weight": 0.3333333333333333
+        },
+        {
+          "id": "service:trauma",
+          "weight": 0.3333333333333333
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:families_infants:risk:s2",
+      "name": "Помощь при утрате ухода",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:social_center",
+          "weight": 0.5
+        },
+        {
+          "id": "service:orphanage",
+          "weight": 0.5
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:families_infants:risk",
+      "name": "Риск и помощь",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "ksd:families_infants:risk:s1",
+          "weight": 0.75
+        },
+        {
+          "id": "ksd:families_infants:risk:s2",
+          "weight": 0.25
+        }
+      ],
+      "todo": "TODO: экспертно откалибровать веса жизненных ситуаций; текущие значения — предварительные."
+    },
+    {
+      "id": "ksd:families_infants",
+      "name": "Семьи с детьми до 3 лет",
+      "operation": "k_sd",
+      "dependencies": [
+        {
+          "id": "ksd:families_infants:work"
+        },
+        {
+          "id": "ksd:families_infants:leisure"
+        },
+        {
+          "id": "ksd:families_infants:development"
+        },
+        {
+          "id": "ksd:families_infants:risk"
+        }
+      ],
+      "symbol": "K_SD(SG_1)"
+    },
+    {
+      "id": "ksd:families_school:work:s1",
+      "name": "Обязательное школьное обучение",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:school",
+          "weight": 1.0
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:families_school:work",
+      "name": "Основная деятельность",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "ksd:families_school:work:s1",
+          "weight": 1
+        }
+      ],
+      "todo": "TODO: экспертно откалибровать веса жизненных ситуаций; текущие значения — предварительные."
+    },
+    {
+      "id": "ksd:families_school:leisure:s1",
+      "name": "Активный отдых",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:pitch",
+          "weight": 0.25
+        },
+        {
+          "id": "service:swimming_pool",
+          "weight": 0.25
+        },
+        {
+          "id": "service:skating",
+          "weight": 0.25
+        },
+        {
+          "id": "service:dog_park",
+          "weight": 0.25
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:families_school:leisure:s2",
+      "name": "Семейные развлечения",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:amusement",
+          "weight": 0.25
+        },
+        {
+          "id": "service:water_park",
+          "weight": 0.25
+        },
+        {
+          "id": "service:zoo",
+          "weight": 0.25
+        },
+        {
+          "id": "service:cinema",
+          "weight": 0.25
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:families_school:leisure",
+      "name": "Досуг",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "ksd:families_school:leisure:s1",
+          "weight": 0.6
+        },
+        {
+          "id": "ksd:families_school:leisure:s2",
+          "weight": 0.4
+        }
+      ],
+      "todo": "TODO: экспертно откалибровать веса жизненных ситуаций; текущие значения — предварительные."
+    },
+    {
+      "id": "ksd:families_school:development:s1",
+      "name": "Внешкольное образование и спорт",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:additional_education",
+          "weight": 0.3333333333333333
+        },
+        {
+          "id": "service:gym",
+          "weight": 0.3333333333333333
+        },
+        {
+          "id": "service:stadium",
+          "weight": 0.3333333333333333
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:families_school:development:s2",
+      "name": "Культурное развитие",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:museum",
+          "weight": 0.5
+        },
+        {
+          "id": "service:theatre",
+          "weight": 0.5
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:families_school:development",
+      "name": "Развитие",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "ksd:families_school:development:s1",
+          "weight": 0.6
+        },
+        {
+          "id": "ksd:families_school:development:s2",
+          "weight": 0.4
+        }
+      ],
+      "todo": "TODO: экспертно откалибровать веса жизненных ситуаций; текущие значения — предварительные."
+    },
+    {
+      "id": "ksd:families_school:risk:s1",
+      "name": "Помощь при травмах и заболеваниях",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:trauma",
+          "weight": 0.3333333333333333
+        },
+        {
+          "id": "service:hospital",
+          "weight": 0.3333333333333333
+        },
+        {
+          "id": "service:dispensary",
+          "weight": 0.3333333333333333
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:families_school:risk:s2",
+      "name": "Социальная защита",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:orphanage",
+          "weight": 0.5
+        },
+        {
+          "id": "service:social_center",
+          "weight": 0.5
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:families_school:risk",
+      "name": "Риск и помощь",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "ksd:families_school:risk:s1",
+          "weight": 0.7
+        },
+        {
+          "id": "ksd:families_school:risk:s2",
+          "weight": 0.3
+        }
+      ],
+      "todo": "TODO: экспертно откалибровать веса жизненных ситуаций; текущие значения — предварительные."
+    },
+    {
+      "id": "ksd:families_school",
+      "name": "Семьи со школьниками 7–17 лет",
+      "operation": "k_sd",
+      "dependencies": [
+        {
+          "id": "ksd:families_school:work"
+        },
+        {
+          "id": "ksd:families_school:leisure"
+        },
+        {
+          "id": "ksd:families_school:development"
+        },
+        {
+          "id": "ksd:families_school:risk"
+        }
+      ],
+      "symbol": "K_SD(SG_2)"
+    },
+    {
+      "id": "ksd:pregnant:work:s1",
+      "name": "Наблюдение беременности",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:womens_clinic",
+          "weight": 1.0
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:pregnant:work",
+      "name": "Основная деятельность",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "ksd:pregnant:work:s1",
+          "weight": 1
+        }
+      ],
+      "todo": "TODO: экспертно откалибровать веса жизненных ситуаций; текущие значения — предварительные."
+    },
+    {
+      "id": "ksd:pregnant:leisure:s1",
+      "name": "Прогулки и восстановление",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:park",
+          "weight": 0.2
+        },
+        {
+          "id": "service:forest",
+          "weight": 0.2
+        },
+        {
+          "id": "service:embankment",
+          "weight": 0.2
+        },
+        {
+          "id": "service:botanical_garden",
+          "weight": 0.2
+        },
+        {
+          "id": "service:beach",
+          "weight": 0.2
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:pregnant:leisure:s2",
+      "name": "Повседневный отдых",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:cafe",
+          "weight": 0.5
+        },
+        {
+          "id": "service:bakery",
+          "weight": 0.5
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:pregnant:leisure",
+      "name": "Досуг",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "ksd:pregnant:leisure:s1",
+          "weight": 0.8
+        },
+        {
+          "id": "ksd:pregnant:leisure:s2",
+          "weight": 0.2
+        }
+      ],
+      "todo": "TODO: экспертно откалибровать веса жизненных ситуаций; текущие значения — предварительные."
+    },
+    {
+      "id": "ksd:pregnant:development:s1",
+      "name": "Подготовка к родам",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:cultural_center",
+          "weight": 0.5
+        },
+        {
+          "id": "service:gym",
+          "weight": 0.5
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:pregnant:development:s2",
+      "name": "Самообразование",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:library",
+          "weight": 0.5
+        },
+        {
+          "id": "service:bookstore",
+          "weight": 0.5
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:pregnant:development",
+      "name": "Развитие",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "ksd:pregnant:development:s1",
+          "weight": 0.7
+        },
+        {
+          "id": "ksd:pregnant:development:s2",
+          "weight": 0.3
+        }
+      ],
+      "todo": "TODO: экспертно откалибровать веса жизненных ситуаций; текущие значения — предварительные."
+    },
+    {
+      "id": "ksd:pregnant:risk:s1",
+      "name": "Экстренная медицинская помощь",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:maternity",
+          "weight": 0.3333333333333333
+        },
+        {
+          "id": "service:hospital",
+          "weight": 0.3333333333333333
+        },
+        {
+          "id": "service:ambulance",
+          "weight": 0.3333333333333333
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:pregnant:risk:s2",
+      "name": "Восстановление здоровья",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:dispensary",
+          "weight": 0.5
+        },
+        {
+          "id": "service:rehabilitation",
+          "weight": 0.5
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:pregnant:risk",
+      "name": "Риск и помощь",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "ksd:pregnant:risk:s1",
+          "weight": 0.8
+        },
+        {
+          "id": "ksd:pregnant:risk:s2",
+          "weight": 0.2
+        }
+      ],
+      "todo": "TODO: экспертно откалибровать веса жизненных ситуаций; текущие значения — предварительные."
+    },
+    {
+      "id": "ksd:pregnant",
+      "name": "Беременные женщины",
+      "operation": "k_sd",
+      "dependencies": [
+        {
+          "id": "ksd:pregnant:work"
+        },
+        {
+          "id": "ksd:pregnant:leisure"
+        },
+        {
+          "id": "ksd:pregnant:development"
+        },
+        {
+          "id": "ksd:pregnant:risk"
+        }
+      ],
+      "symbol": "K_SD(SG_3)"
+    },
+    {
+      "id": "ksd:youth:work:s1",
+      "name": "Профессиональное образование",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:university",
+          "weight": 0.5
+        },
+        {
+          "id": "service:college",
+          "weight": 0.5
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:youth:work:s2",
+      "name": "Временное проживание",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:hostel",
+          "weight": 0.5
+        },
+        {
+          "id": "service:hotel",
+          "weight": 0.5
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:youth:work",
+      "name": "Основная деятельность",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "ksd:youth:work:s1",
+          "weight": 0.8
+        },
+        {
+          "id": "ksd:youth:work:s2",
+          "weight": 0.2
+        }
+      ],
+      "todo": "TODO: экспертно откалибровать веса жизненных ситуаций; текущие значения — предварительные."
+    },
+    {
+      "id": "ksd:youth:leisure:s1",
+      "name": "Социализация и досуг",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:bar",
+          "weight": 0.2
+        },
+        {
+          "id": "service:cafe",
+          "weight": 0.2
+        },
+        {
+          "id": "service:restaurant",
+          "weight": 0.2
+        },
+        {
+          "id": "service:cinema",
+          "weight": 0.2
+        },
+        {
+          "id": "service:mall",
+          "weight": 0.2
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:youth:leisure:s2",
+      "name": "Активный отдых",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:amusement",
+          "weight": 0.2
+        },
+        {
+          "id": "service:skate_park",
+          "weight": 0.2
+        },
+        {
+          "id": "service:pitch",
+          "weight": 0.2
+        },
+        {
+          "id": "service:beach",
+          "weight": 0.2
+        },
+        {
+          "id": "service:recreation_base",
+          "weight": 0.2
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:youth:leisure",
+      "name": "Досуг",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "ksd:youth:leisure:s1",
+          "weight": 0.6
+        },
+        {
+          "id": "ksd:youth:leisure:s2",
+          "weight": 0.4
+        }
+      ],
+      "todo": "TODO: экспертно откалибровать веса жизненных ситуаций; текущие значения — предварительные."
+    },
+    {
+      "id": "ksd:youth:development:s1",
+      "name": "Культурное и самостоятельное развитие",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:library",
+          "weight": 0.25
+        },
+        {
+          "id": "service:museum",
+          "weight": 0.25
+        },
+        {
+          "id": "service:theatre",
+          "weight": 0.25
+        },
+        {
+          "id": "service:cultural_center",
+          "weight": 0.25
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:youth:development:s2",
+      "name": "Поддержание физической формы",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:gym",
+          "weight": 1.0
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:youth:development",
+      "name": "Развитие",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "ksd:youth:development:s1",
+          "weight": 0.65
+        },
+        {
+          "id": "ksd:youth:development:s2",
+          "weight": 0.35
+        }
+      ],
+      "todo": "TODO: экспертно откалибровать веса жизненных ситуаций; текущие значения — предварительные."
+    },
+    {
+      "id": "ksd:youth:risk:s1",
+      "name": "Медицинская и психологическая помощь",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:dispensary",
+          "weight": 0.5
+        },
+        {
+          "id": "service:trauma",
+          "weight": 0.5
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:youth:risk:s2",
+      "name": "Поддержка при жизненных трудностях",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:recruitment",
+          "weight": 0.3333333333333333
+        },
+        {
+          "id": "service:police",
+          "weight": 0.3333333333333333
+        },
+        {
+          "id": "service:social_center",
+          "weight": 0.3333333333333333
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:youth:risk",
+      "name": "Риск и помощь",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "ksd:youth:risk:s1",
+          "weight": 0.65
+        },
+        {
+          "id": "ksd:youth:risk:s2",
+          "weight": 0.35
+        }
+      ],
+      "todo": "TODO: экспертно откалибровать веса жизненных ситуаций; текущие значения — предварительные."
+    },
+    {
+      "id": "ksd:youth",
+      "name": "Молодёжь 18–25 лет",
+      "operation": "k_sd",
+      "dependencies": [
+        {
+          "id": "ksd:youth:work"
+        },
+        {
+          "id": "ksd:youth:leisure"
+        },
+        {
+          "id": "ksd:youth:development"
+        },
+        {
+          "id": "ksd:youth:risk"
+        }
+      ],
+      "symbol": "K_SD(SG_4)"
+    },
+    {
+      "id": "ksd:workers:work:s1",
+      "name": "Рабочие места и трудовая реализация",
+      "operation": "unavailable",
+      "todo": "TODO: определить рабочие места, спрос на занятость и методику поддержки трудовой деятельности."
+    },
+    {
+      "id": "ksd:workers:work",
+      "name": "Основная деятельность",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "ksd:workers:work:s1",
+          "weight": 1
+        }
+      ],
+      "todo": "TODO: экспертно откалибровать веса жизненных ситуаций; текущие значения — предварительные."
+    },
+    {
+      "id": "ksd:workers:leisure:s1",
+      "name": "Семейные покупки и бытовые дела",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:supermarket",
+          "weight": 0.25
+        },
+        {
+          "id": "service:mall",
+          "weight": 0.25
+        },
+        {
+          "id": "service:hairdresser",
+          "weight": 0.25
+        },
+        {
+          "id": "service:domestic_services",
+          "weight": 0.25
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:workers:leisure:s2",
+      "name": "Вечерний отдых",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:cafe",
+          "weight": 0.3333333333333333
+        },
+        {
+          "id": "service:cinema",
+          "weight": 0.3333333333333333
+        },
+        {
+          "id": "service:recreation_base",
+          "weight": 0.3333333333333333
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:workers:leisure",
+      "name": "Досуг",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "ksd:workers:leisure:s1",
+          "weight": 0.6
+        },
+        {
+          "id": "ksd:workers:leisure:s2",
+          "weight": 0.4
+        }
+      ],
+      "todo": "TODO: экспертно откалибровать веса жизненных ситуаций; текущие значения — предварительные."
+    },
+    {
+      "id": "ksd:workers:development:s1",
+      "name": "Карьерное развитие и обучение",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:university",
+          "weight": 0.3333333333333333
+        },
+        {
+          "id": "service:vocational_training",
+          "weight": 0.3333333333333333
+        },
+        {
+          "id": "service:bookstore",
+          "weight": 0.3333333333333333
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:workers:development:s2",
+      "name": "Физическая форма",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:gym",
+          "weight": 0.5
+        },
+        {
+          "id": "service:stadium",
+          "weight": 0.5
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:workers:development",
+      "name": "Развитие",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "ksd:workers:development:s1",
+          "weight": 0.6
+        },
+        {
+          "id": "ksd:workers:development:s2",
+          "weight": 0.4
+        }
+      ],
+      "todo": "TODO: экспертно откалибровать веса жизненных ситуаций; текущие значения — предварительные."
+    },
+    {
+      "id": "ksd:workers:risk:s1",
+      "name": "Помощь при производственных рисках",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:trauma",
+          "weight": 0.2
+        },
+        {
+          "id": "service:fire_station",
+          "weight": 0.2
+        },
+        {
+          "id": "service:hospital",
+          "weight": 0.2
+        },
+        {
+          "id": "service:dispensary",
+          "weight": 0.2
+        },
+        {
+          "id": "service:rehabilitation",
+          "weight": 0.2
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:workers:risk:s2",
+      "name": "Поддержка при потере работы",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:recruitment",
+          "weight": 1.0
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:workers:risk",
+      "name": "Риск и помощь",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "ksd:workers:risk:s1",
+          "weight": 0.7
+        },
+        {
+          "id": "ksd:workers:risk:s2",
+          "weight": 0.3
+        }
+      ],
+      "todo": "TODO: экспертно откалибровать веса жизненных ситуаций; текущие значения — предварительные."
+    },
+    {
+      "id": "ksd:workers",
+      "name": "Работающее население",
+      "operation": "k_sd",
+      "dependencies": [
+        {
+          "id": "ksd:workers:work"
+        },
+        {
+          "id": "ksd:workers:leisure"
+        },
+        {
+          "id": "ksd:workers:development"
+        },
+        {
+          "id": "ksd:workers:risk"
+        }
+      ],
+      "symbol": "K_SD(SG_5)"
+    },
+    {
+      "id": "ksd:elderly:work:s1",
+      "name": "Регулярная медицинская помощь",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:polyclinic",
+          "weight": 0.5
+        },
+        {
+          "id": "service:pharmacy",
+          "weight": 0.5
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:elderly:work:s2",
+      "name": "Бытовые и финансовые дела",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:post",
+          "weight": 0.25
+        },
+        {
+          "id": "service:bank",
+          "weight": 0.25
+        },
+        {
+          "id": "service:convenience",
+          "weight": 0.25
+        },
+        {
+          "id": "service:houseware",
+          "weight": 0.25
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:elderly:work",
+      "name": "Основная деятельность",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "ksd:elderly:work:s1",
+          "weight": 0.6
+        },
+        {
+          "id": "ksd:elderly:work:s2",
+          "weight": 0.4
+        }
+      ],
+      "todo": "TODO: экспертно откалибровать веса жизненных ситуаций; текущие значения — предварительные."
+    },
+    {
+      "id": "ksd:elderly:leisure:s1",
+      "name": "Прогулки и общение",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:park",
+          "weight": 0.3333333333333333
+        },
+        {
+          "id": "service:embankment",
+          "weight": 0.3333333333333333
+        },
+        {
+          "id": "service:cultural_center",
+          "weight": 0.3333333333333333
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:elderly:leisure:s2",
+      "name": "Духовная жизнь и бытовой отдых",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:religion",
+          "weight": 0.3333333333333333
+        },
+        {
+          "id": "service:monastery",
+          "weight": 0.3333333333333333
+        },
+        {
+          "id": "service:bath",
+          "weight": 0.3333333333333333
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:elderly:leisure",
+      "name": "Досуг",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "ksd:elderly:leisure:s1",
+          "weight": 0.65
+        },
+        {
+          "id": "ksd:elderly:leisure:s2",
+          "weight": 0.35
+        }
+      ],
+      "todo": "TODO: экспертно откалибровать веса жизненных ситуаций; текущие значения — предварительные."
+    },
+    {
+      "id": "ksd:elderly:development:s1",
+      "name": "Культурная и познавательная активность",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:library",
+          "weight": 0.25
+        },
+        {
+          "id": "service:museum",
+          "weight": 0.25
+        },
+        {
+          "id": "service:cultural_center",
+          "weight": 0.25
+        },
+        {
+          "id": "service:reserve",
+          "weight": 0.25
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:elderly:development",
+      "name": "Развитие",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "ksd:elderly:development:s1",
+          "weight": 1
+        }
+      ],
+      "todo": "TODO: экспертно откалибровать веса жизненных ситуаций; текущие значения — предварительные."
+    },
+    {
+      "id": "ksd:elderly:risk:s1",
+      "name": "Помощь при утрате самостоятельности",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:elderly_home",
+          "weight": 0.3333333333333333
+        },
+        {
+          "id": "service:rehabilitation",
+          "weight": 0.3333333333333333
+        },
+        {
+          "id": "service:social_center",
+          "weight": 0.3333333333333333
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:elderly:risk:s2",
+      "name": "Медицинская и правовая защита",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:dispensary",
+          "weight": 0.5
+        },
+        {
+          "id": "service:police",
+          "weight": 0.5
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:elderly:risk",
+      "name": "Риск и помощь",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "ksd:elderly:risk:s1",
+          "weight": 0.7
+        },
+        {
+          "id": "ksd:elderly:risk:s2",
+          "weight": 0.3
+        }
+      ],
+      "todo": "TODO: экспертно откалибровать веса жизненных ситуаций; текущие значения — предварительные."
+    },
+    {
+      "id": "ksd:elderly",
+      "name": "Пожилые люди 60+",
+      "operation": "k_sd",
+      "dependencies": [
+        {
+          "id": "ksd:elderly:work"
+        },
+        {
+          "id": "ksd:elderly:leisure"
+        },
+        {
+          "id": "ksd:elderly:development"
+        },
+        {
+          "id": "ksd:elderly:risk"
+        }
+      ],
+      "symbol": "K_SD(SG_6)"
+    },
+    {
+      "id": "ksd:entrepreneurs:work:s1",
+      "name": "Условия ведения бизнеса и занятости",
+      "operation": "unavailable",
+      "todo": "TODO: определить рабочие места, спрос на занятость и методику поддержки трудовой деятельности."
+    },
+    {
+      "id": "ksd:entrepreneurs:work",
+      "name": "Основная деятельность",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "ksd:entrepreneurs:work:s1",
+          "weight": 1
+        }
+      ],
+      "todo": "TODO: экспертно откалибровать веса жизненных ситуаций; текущие значения — предварительные."
+    },
+    {
+      "id": "ksd:entrepreneurs:leisure:s1",
+      "name": "Деловое общение и восстановление",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:restaurant",
+          "weight": 0.3333333333333333
+        },
+        {
+          "id": "service:cafe",
+          "weight": 0.3333333333333333
+        },
+        {
+          "id": "service:pier",
+          "weight": 0.3333333333333333
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:entrepreneurs:leisure:s2",
+      "name": "Отдых и здоровье",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:gym",
+          "weight": 0.25
+        },
+        {
+          "id": "service:recreation_base",
+          "weight": 0.25
+        },
+        {
+          "id": "service:hotel",
+          "weight": 0.25
+        },
+        {
+          "id": "service:sanatorium",
+          "weight": 0.25
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:entrepreneurs:leisure",
+      "name": "Досуг",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "ksd:entrepreneurs:leisure:s1",
+          "weight": 0.7
+        },
+        {
+          "id": "ksd:entrepreneurs:leisure:s2",
+          "weight": 0.3
+        }
+      ],
+      "todo": "TODO: экспертно откалибровать веса жизненных ситуаций; текущие значения — предварительные."
+    },
+    {
+      "id": "ksd:entrepreneurs:development:s1",
+      "name": "Юридическая и финансовая грамотность",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:lawyer",
+          "weight": 0.5
+        },
+        {
+          "id": "service:bank",
+          "weight": 0.5
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:entrepreneurs:development:s2",
+      "name": "Управленческое образование",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:business_training",
+          "weight": 0.5
+        },
+        {
+          "id": "service:library",
+          "weight": 0.5
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:entrepreneurs:development",
+      "name": "Развитие",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "ksd:entrepreneurs:development:s1",
+          "weight": 0.65
+        },
+        {
+          "id": "ksd:entrepreneurs:development:s2",
+          "weight": 0.35
+        }
+      ],
+      "todo": "TODO: экспертно откалибровать веса жизненных ситуаций; текущие значения — предварительные."
+    },
+    {
+      "id": "ksd:entrepreneurs:risk:s1",
+      "name": "Правовые и финансовые трудности",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:lawyer",
+          "weight": 0.5
+        },
+        {
+          "id": "service:police",
+          "weight": 0.5
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:entrepreneurs:risk:s2",
+      "name": "Чрезвычайные ситуации и кадровый дефицит",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "service:fire_station",
+          "weight": 0.5
+        },
+        {
+          "id": "service:recruitment",
+          "weight": 0.5
+        }
+      ],
+      "todo": "TODO: проверить состав сервисов и их веса; сейчас равные веса доступных типов."
+    },
+    {
+      "id": "ksd:entrepreneurs:risk",
+      "name": "Риск и помощь",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "ksd:entrepreneurs:risk:s1",
+          "weight": 0.65
+        },
+        {
+          "id": "ksd:entrepreneurs:risk:s2",
+          "weight": 0.35
+        }
+      ],
+      "todo": "TODO: экспертно откалибровать веса жизненных ситуаций; текущие значения — предварительные."
+    },
+    {
+      "id": "ksd:entrepreneurs",
+      "name": "Предприниматели (МСП)",
+      "operation": "k_sd",
+      "dependencies": [
+        {
+          "id": "ksd:entrepreneurs:work"
+        },
+        {
+          "id": "ksd:entrepreneurs:leisure"
+        },
+        {
+          "id": "ksd:entrepreneurs:development"
+        },
+        {
+          "id": "ksd:entrepreneurs:risk"
+        }
+      ],
+      "symbol": "K_SD(SG_7)"
+    },
+    {
+      "id": "service:additional_education",
+      "name": "Обеспеченность: дополнительное образование детей",
+      "operation": "service",
+      "service": "additional_education"
+    },
+    {
+      "id": "service:ambulance",
+      "name": "Обеспеченность: скорая медицинская помощь",
+      "operation": "service",
+      "service": "ambulance"
+    },
+    {
+      "id": "service:amusement",
+      "name": "Обеспеченность: парк аттракционов",
+      "operation": "service",
+      "service": "amusement"
+    },
+    {
+      "id": "service:bakery",
+      "name": "Обеспеченность: пекарня",
+      "operation": "service",
+      "service": "bakery"
+    },
+    {
+      "id": "service:bank",
+      "name": "Обеспеченность: банк",
+      "operation": "service",
+      "service": "bank"
+    },
+    {
+      "id": "service:bar",
+      "name": "Обеспеченность: бар",
+      "operation": "service",
+      "service": "bar"
+    },
+    {
+      "id": "service:bath",
+      "name": "Обеспеченность: общественная баня",
+      "operation": "service",
+      "service": "bath"
+    },
+    {
+      "id": "service:beach",
+      "name": "Обеспеченность: пляж",
+      "operation": "service",
+      "service": "beach"
+    },
+    {
+      "id": "service:bookstore",
+      "name": "Обеспеченность: книжный магазин",
+      "operation": "service",
+      "service": "bookstore"
+    },
+    {
+      "id": "service:botanical_garden",
+      "name": "Обеспеченность: ботанический сад",
+      "operation": "service",
+      "service": "botanical_garden"
+    },
+    {
+      "id": "service:business_training",
+      "name": "Обеспеченность: бизнес-образование",
+      "operation": "service",
+      "service": "business_training"
+    },
+    {
+      "id": "service:cafe",
+      "name": "Обеспеченность: кафе/столовая",
+      "operation": "service",
+      "service": "cafe"
+    },
+    {
+      "id": "service:cinema",
+      "name": "Обеспеченность: кинотеатр",
+      "operation": "service",
+      "service": "cinema"
+    },
+    {
+      "id": "service:circus",
+      "name": "Обеспеченность: цирк",
+      "operation": "service",
+      "service": "circus"
+    },
+    {
+      "id": "service:college",
+      "name": "Обеспеченность: учреждение среднего профессионального образования",
+      "operation": "service",
+      "service": "college"
+    },
+    {
+      "id": "service:convenience",
+      "name": "Обеспеченность: магазин у дома",
+      "operation": "service",
+      "service": "convenience"
+    },
+    {
+      "id": "service:cultural_center",
+      "name": "Обеспеченность: дворец культуры",
+      "operation": "service",
+      "service": "cultural_center"
+    },
+    {
+      "id": "service:dispensary",
+      "name": "Обеспеченность: диспансер",
+      "operation": "service",
+      "service": "dispensary"
+    },
+    {
+      "id": "service:dog_park",
+      "name": "Обеспеченность: площадка для выгула собак",
+      "operation": "service",
+      "service": "dog_park"
+    },
+    {
+      "id": "service:domestic_services",
+      "name": "Обеспеченность: бытовые услуги",
+      "operation": "service",
+      "service": "domestic_services"
+    },
+    {
+      "id": "service:elderly_home",
+      "name": "Обеспеченность: дом престарелых",
+      "operation": "service",
+      "service": "elderly_home"
+    },
+    {
+      "id": "service:embankment",
+      "name": "Обеспеченность: набережная",
+      "operation": "service",
+      "service": "embankment"
+    },
+    {
+      "id": "service:family_cafe",
+      "name": "Обеспеченность: семейное кафе",
+      "operation": "service",
+      "service": "family_cafe"
+    },
+    {
+      "id": "service:fire_station",
+      "name": "Обеспеченность: пожарная станция",
+      "operation": "service",
+      "service": "fire_station"
+    },
+    {
+      "id": "service:forest",
+      "name": "Обеспеченность: лес",
+      "operation": "service",
+      "service": "forest"
+    },
+    {
+      "id": "service:gym",
+      "name": "Обеспеченность: спортивный зал",
+      "operation": "service",
+      "service": "gym"
+    },
+    {
+      "id": "service:hairdresser",
+      "name": "Обеспеченность: салон красоты/парикмахерская",
+      "operation": "service",
+      "service": "hairdresser"
+    },
+    {
+      "id": "service:hospital",
+      "name": "Обеспеченность: больница",
+      "operation": "service",
+      "service": "hospital"
+    },
+    {
+      "id": "service:hostel",
+      "name": "Обеспеченность: хостел",
+      "operation": "service",
+      "service": "hostel"
+    },
+    {
+      "id": "service:hotel",
+      "name": "Обеспеченность: отель",
+      "operation": "service",
+      "service": "hotel"
+    },
+    {
+      "id": "service:houseware",
+      "name": "Обеспеченность: хозяйственные товары",
+      "operation": "service",
+      "service": "houseware"
+    },
+    {
+      "id": "service:lawyer",
+      "name": "Обеспеченность: юридические услуги",
+      "operation": "service",
+      "service": "lawyer"
+    },
+    {
+      "id": "service:library",
+      "name": "Обеспеченность: библиотека",
+      "operation": "service",
+      "service": "library"
+    },
+    {
+      "id": "service:mall",
+      "name": "Обеспеченность: торговый центр",
+      "operation": "service",
+      "service": "mall"
+    },
+    {
+      "id": "service:maternity",
+      "name": "Обеспеченность: роддом",
+      "operation": "service",
+      "service": "maternity"
+    },
+    {
+      "id": "service:monastery",
+      "name": "Обеспеченность: монастырь",
+      "operation": "service",
+      "service": "monastery"
+    },
+    {
+      "id": "service:museum",
+      "name": "Обеспеченность: музей",
+      "operation": "service",
+      "service": "museum"
+    },
+    {
+      "id": "service:nursery",
+      "name": "Обеспеченность: детский сад (ясли)",
+      "operation": "service",
+      "service": "nursery"
+    },
+    {
+      "id": "service:orphanage",
+      "name": "Обеспеченность: детский дом-интернат",
+      "operation": "service",
+      "service": "orphanage"
+    },
+    {
+      "id": "service:park",
+      "name": "Обеспеченность: парк",
+      "operation": "service",
+      "service": "park"
+    },
+    {
+      "id": "service:pharmacy",
+      "name": "Обеспеченность: аптека",
+      "operation": "service",
+      "service": "pharmacy"
+    },
+    {
+      "id": "service:pier",
+      "name": "Обеспеченность: пирс",
+      "operation": "service",
+      "service": "pier"
+    },
+    {
+      "id": "service:pitch",
+      "name": "Обеспеченность: спортивная площадка",
+      "operation": "service",
+      "service": "pitch"
+    },
+    {
+      "id": "service:police",
+      "name": "Обеспеченность: полиция",
+      "operation": "service",
+      "service": "police"
+    },
+    {
+      "id": "service:polyclinic",
+      "name": "Обеспеченность: поликлиника",
+      "operation": "service",
+      "service": "polyclinic"
+    },
+    {
+      "id": "service:post",
+      "name": "Обеспеченность: почта",
+      "operation": "service",
+      "service": "post"
+    },
+    {
+      "id": "service:recreation_base",
+      "name": "Обеспеченность: база отдыха",
+      "operation": "service",
+      "service": "recreation_base"
+    },
+    {
+      "id": "service:recruitment",
+      "name": "Обеспеченность: центр занятости населения",
+      "operation": "service",
+      "service": "recruitment"
+    },
+    {
+      "id": "service:rehabilitation",
+      "name": "Обеспеченность: реабилитационный сервис",
+      "operation": "service",
+      "service": "rehabilitation"
+    },
+    {
+      "id": "service:religion",
+      "name": "Обеспеченность: религиозный объект",
+      "operation": "service",
+      "service": "religion"
+    },
+    {
+      "id": "service:reserve",
+      "name": "Обеспеченность: заповедник",
+      "operation": "service",
+      "service": "reserve"
+    },
+    {
+      "id": "service:restaurant",
+      "name": "Обеспеченность: ресторан",
+      "operation": "service",
+      "service": "restaurant"
+    },
+    {
+      "id": "service:sanatorium",
+      "name": "Обеспеченность: санаторий",
+      "operation": "service",
+      "service": "sanatorium"
+    },
+    {
+      "id": "service:school",
+      "name": "Обеспеченность: школа",
+      "operation": "service",
+      "service": "school"
+    },
+    {
+      "id": "service:skate_park",
+      "name": "Обеспеченность: скейт-парк",
+      "operation": "service",
+      "service": "skate_park"
+    },
+    {
+      "id": "service:skating",
+      "name": "Обеспеченность: ледовая арена",
+      "operation": "service",
+      "service": "skating"
+    },
+    {
+      "id": "service:social_center",
+      "name": "Обеспеченность: центр социального обслуживания",
+      "operation": "service",
+      "service": "social_center"
+    },
+    {
+      "id": "service:stable",
+      "name": "Обеспеченность: конюшня",
+      "operation": "service",
+      "service": "stable"
+    },
+    {
+      "id": "service:stadium",
+      "name": "Обеспеченность: стадион",
+      "operation": "service",
+      "service": "stadium"
+    },
+    {
+      "id": "service:supermarket",
+      "name": "Обеспеченность: универсам/супермаркет/гипермаркет",
+      "operation": "service",
+      "service": "supermarket"
+    },
+    {
+      "id": "service:swimming_pool",
+      "name": "Обеспеченность: плавательный бассейн",
+      "operation": "service",
+      "service": "swimming_pool"
+    },
+    {
+      "id": "service:theatre",
+      "name": "Обеспеченность: театр",
+      "operation": "service",
+      "service": "theatre"
+    },
+    {
+      "id": "service:trauma",
+      "name": "Обеспеченность: травматологический пункт",
+      "operation": "service",
+      "service": "trauma"
+    },
+    {
+      "id": "service:university",
+      "name": "Обеспеченность: учреждение высшего профессионального образования",
+      "operation": "service",
+      "service": "university"
+    },
+    {
+      "id": "service:vocational_training",
+      "name": "Обеспеченность: повышение квалификации",
+      "operation": "service",
+      "service": "vocational_training"
+    },
+    {
+      "id": "service:water_park",
+      "name": "Обеспеченность: аквапарк",
+      "operation": "service",
+      "service": "water_park"
+    },
+    {
+      "id": "service:womens_clinic",
+      "name": "Обеспеченность: женская консультация",
+      "operation": "service",
+      "service": "womens_clinic"
+    },
+    {
+      "id": "service:zoo",
+      "name": "Обеспеченность: зоопарк",
+      "operation": "service",
+      "service": "zoo"
+    },
+    {
+      "id": "ksd",
+      "name": "K_SD — поддержка образа жизни",
+      "operation": "weighted_mean",
+      "dependencies": [
+        {
+          "id": "ksd:families_infants",
+          "weight": 0.14285714285714285
+        },
+        {
+          "id": "ksd:families_school",
+          "weight": 0.14285714285714285
+        },
+        {
+          "id": "ksd:pregnant",
+          "weight": 0.14285714285714285
+        },
+        {
+          "id": "ksd:youth",
+          "weight": 0.14285714285714285
+        },
+        {
+          "id": "ksd:workers",
+          "weight": 0.14285714285714285
+        },
+        {
+          "id": "ksd:elderly",
+          "weight": 0.14285714285714285
+        },
+        {
+          "id": "ksd:entrepreneurs",
+          "weight": 0.14285714285714285
+        }
+      ],
+      "todo": "TODO: согласовать объединение социальных групп и направление критерия. Сейчас равные веса групп; формула (46) сохранена как поддержка, больше — лучше.",
+      "symbol": "K_SD"
+    },
+    {
+      "id": "ktw",
+      "symbol": "K_TW",
+      "name": "Изъятие территорий в хозяйственный оборот",
+      "operation": "unavailable",
+      "direction": "lower_is_better"
+    },
+    {
+      "id": "ked",
+      "symbol": "K_ED",
+      "name": "Экологический ущерб",
+      "operation": "unavailable",
+      "direction": "lower_is_better"
+    }
+  ]
+}

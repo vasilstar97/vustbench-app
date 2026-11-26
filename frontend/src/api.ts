@@ -72,7 +72,15 @@ export interface Indicator {
   unit: string;
   precision: number;
   scale: number;
-  status: 'ready' | 'missing' | 'unavailable';
+  status: 'ready' | 'partial' | 'missing' | 'unavailable';
+  source?: 'criteria';
+  dependencies?: {id: string; weight?: number}[];
+  operation?: 'service' | 'unavailable' | 'weighted_mean' | 'k_sd';
+  direction?: 'higher_is_better' | 'lower_is_better';
+  coverage?: number;
+  population_coverage?: number;
+  todo?: string | null;
+  service?: string;
   map: IndicatorMap | null;
   run_id: string | null;
 }
@@ -105,6 +113,9 @@ async function request<T>(path: string, init: RequestInit = {}): Promise<T> {
 export const api = {
   city: (signal?: AbortSignal) => request<City>('/city', { signal }),
   indicators: (signal?: AbortSignal) => request<{items: Indicator[]}>('/indicators', {signal}),
+  criteria: (signal?: AbortSignal) => request<{items: Indicator[]; roots: string[]}>('/criteria', {signal}),
+  criterionLayer: (id: string, params: URLSearchParams, signal: AbortSignal) =>
+    request<LayerData>(`/criteria/${encodeURIComponent(id)}/layers/blocks?${params}`, {signal}),
   indicatorLayer: (id: string, layer: LayerName, params: URLSearchParams, signal: AbortSignal) =>
     request<LayerData>(`/indicators/${encodeURIComponent(id)}/layers/${layer}?${params}`, {signal}),
   serviceTypes: (signal?: AbortSignal) =>

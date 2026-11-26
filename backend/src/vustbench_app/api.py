@@ -11,6 +11,7 @@ from pydantic import BaseModel, ConfigDict, Field
 
 from . import __version__
 from .datasets import DatasetStore
+from .criteria import CriteriaStore
 from .indicators import IndicatorStore
 from .runs import RUN_ID_PATTERN, RunBusyError, RunManager, RunStore
 from .settings import Settings
@@ -60,6 +61,7 @@ def create_app(settings: Settings | None = None, datasets: DatasetStore | None =
     manager = RunManager(settings, runs)
     datasets = datasets or DatasetStore(settings, runs)
     indicators = IndicatorStore(settings, datasets, runs)
+    criteria = CriteriaStore(settings, datasets, indicators, runs)
 
     async def monitor() -> None:
         while True:
@@ -99,6 +101,7 @@ def create_app(settings: Settings | None = None, datasets: DatasetStore | None =
     app.state.manager = manager
     app.state.datasets = datasets
     app.state.indicators = indicators
+    app.state.criteria = criteria
 
     def catalog() -> list[dict[str, Any]]:
         try:
@@ -144,6 +147,29 @@ def create_app(settings: Settings | None = None, datasets: DatasetStore | None =
             return {"items": indicators.rows()}
         except (OSError, ValueError, KeyError) as error:
             raise HTTPException(503, "Не удалось загрузить показатели.") from error
+
+    @app.get("/api/criteria", tags=["criteria"])
+    def get_criteria() -> dict[str, Any]:
+        try:
+            return criteria.rows()
+        except (OSError, ValueError, KeyError) as error:
+            logger.exception("Could not prepare social support criteria")
+            raise HTTPException(503, "Не удалось загрузить критерии.") from error
+
+    @app.get("/api/criteria/{criterion_id}/layers/blocks", tags=["criteria"])
+    def criterion_layer(
+        criterion_id: Annotated[str, Path(pattern=r"^[a-z][a-z0-9_:-]*$")],
+        bbox: Annotated[str | None, Query()] = None,
+        zoom: Annotated[float, Query(ge=0, le=22)] = 12,
+    ) -> dict[str, Any]:
+        bounds = parse_bbox(bbox)
+        try:
+            return criteria.layer(criterion_id, bounds, zoom)
+        except KeyError as error:
+            raise HTTPException(404, "Критерий не найден.") from error
+        except (OSError, ValueError) as error:
+            logger.exception("Could not prepare criterion layer")
+            raise HTTPException(503, "Не удалось загрузить слой критерия.") from error
 
     @app.get("/api/indicators/{indicator_id}/layers/{layer}", tags=["indicators"])
     def indicator_layer(

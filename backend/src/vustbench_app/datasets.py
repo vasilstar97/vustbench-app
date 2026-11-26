@@ -81,6 +81,10 @@ class DatasetStore:
         if layer == "buildings" and zoom < MIN_BUILDING_ZOOM:
             return self._collection([], 0, zoom, min_zoom=MIN_BUILDING_ZOOM)
         frame = self._frame(layer, service, run_id)
+        return self.frame_collection(frame, layer, bbox, zoom, value_field)
+
+    def frame_collection(self, frame: gpd.GeoDataFrame, layer: str, bbox, zoom: float,
+                         value_field: str | None = None, extra_fields: list[str] | None = None) -> dict[str, Any]:
         if bbox is not None:
             indices = frame.sindex.query(box(*bbox), predicate="intersects")
             frame = frame.iloc[indices]
@@ -93,6 +97,7 @@ class DatasetStore:
         }[layer]
         if value_field and value_field not in fields:
             fields.append(value_field)
+        fields.extend(extra_fields or [])
         frame = frame[[column for column in fields if column in frame] + [frame.geometry.name]].copy()
         if layer == "services":
             # Facilities can be footprints; the map displays service markers.
